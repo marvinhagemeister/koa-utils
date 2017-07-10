@@ -1,10 +1,16 @@
 {
-  "name": "typescript-starter",
+  "name": "koa-utils",
   "version": "0.0.1",
-  "description": "typescript boilerplate project",
+  "description": "Various utils for koa",
   "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "author": "Marvin Hagemeister <marvin@marvinhagemeister.de>",
+  "keywords": ["koa", "rest", "middleware"],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:marvinhagemeister/koa-utils.git"
+  },
   "scripts": {
     "cleanup": "rimraf dist/",
     "lint": "tslint 'src/**/*.ts' 'src/**/*.tsx'",
@@ -21,14 +27,14 @@
     "@types/chai": "^4.0.1",
     "@types/mocha": "^2.2.41",
     "chai": "^4.0.2",
-    "husky": "^0.14.2",
-    "lint-staged": "^4.0.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.0.1",
     "mocha": "^3.3.0",
     "nyc": "^11.0.3",
     "prettier": "^1.4.4",
     "rimraf": "^2.6.1",
-    "ts-node": "^3.1.0",
-    "tslint": "^5.1.0",
+    "ts-node": "^3.2.0",
+    "tslint": "^5.5.0",
     "tslint-config-sevenval": "^0.6.3",
     "typescript": "^2.4.1"
   },
@@ -40,10 +46,7 @@
     ]
   },
   "nyc": {
-    "include": [
-      "src/*.ts",
-      "src/**/*.ts"
-    ],
+    "include": ["src/*.ts", "src/**/*.ts"],
     "exclude": [
       "typings",
       "node_modules/",
@@ -51,19 +54,9 @@
       "__tests__/**",
       "**/*.d.ts"
     ],
-    "extension": [
-      ".ts"
-    ],
-    "require": [
-      "ts-node/register"
-    ],
-    "reporter": [
-      "json",
-      "html",
-      "text",
-      "text-summary",
-      "lcovonly"
-    ],
+    "extension": [".ts"],
+    "require": ["ts-node/register"],
+    "reporter": ["json", "html", "text", "text-summary", "lcovonly"],
     "all": true
   }
 }
