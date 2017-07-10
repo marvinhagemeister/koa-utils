@@ -30,10 +30,12 @@
     "@types/koa": "^2.0.39",
     "@types/koa-compose": "^3.2.2",
     "@types/koa-logger": "^2.0.2",
+    "@types/winston": "^2.3.3",
     "koa": "^2.3.0",
     "koa-body": "^2.3.0",
     "koa-compose": "^4.0.0",
-    "koa-logger": "^3.0.1"
+    "koa-logger": "^3.0.1",
+    "winston": "^2.3.1"
   },
   "devDependencies": {
     "@types/chai": "^4.0.1",
