@@ -1,6 +1,6 @@
 {
   "name": "koa-utils",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Various utils for koa",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
