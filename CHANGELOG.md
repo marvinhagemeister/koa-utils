@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.0.4
+
+- Set default log level if none is specified
+- Reword error message when log level is invalid
+
 ## 0.0.3
 
 - Add singleton logger based on [winston](https://github.com/winstonjs/winston)
