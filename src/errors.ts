@@ -32,7 +32,11 @@ export const handleErrors = (cleanup?: Middleware) => async (
     });
 
     if (cleanup !== undefined) {
-      await cleanup(ctx, noop);
+      try {
+        await cleanup(ctx, noop);
+      } catch (err) {
+        // noop
+      }
     }
     ctx.app.emit("error", err, ctx);
   }
