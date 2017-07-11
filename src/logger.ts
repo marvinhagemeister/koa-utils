@@ -6,11 +6,9 @@ const logger = new winston.Logger({
 });
 
 const levels = ["error", "warn", "info", "verbose", "debug"];
-
 let level = process.env.LOG_LEVEL;
-
 if (level === undefined) {
-  level = "error";
+  level = process.env.NODE_ENV === "production" ? "error" : "debug";
 } else if (!levels.includes(level)) {
   throw new Error(
     `Unknown log level "${level}". Must be one of "${levels.join(", ")}"`,
