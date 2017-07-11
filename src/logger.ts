@@ -7,11 +7,14 @@ const logger = new winston.Logger({
 
 const levels = ["error", "warn", "info", "verbose", "debug"];
 
-let level = String(process.env.LOG_LEVEL);
-if (level === "") {
+let level = process.env.LOG_LEVEL;
+
+if (level === undefined) {
   level = "error";
 } else if (!levels.includes(level)) {
-  throw new Error("Unknown log level. Must be one of " + levels.join(", "));
+  throw new Error(
+    `Unknown log level "${level}". Must be one of "${levels.join(", ")}"`,
+  );
 }
 
 logger.level = level;
