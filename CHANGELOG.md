@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.3
+
+- Add singleton logger based on [winston](https://github.com/winstonjs/winston)
+
 ## 0.0.2
 
 - Add generic rest middlewares function
