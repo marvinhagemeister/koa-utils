@@ -1,5 +1,7 @@
 # Changelog
 
-## 1.0.0
+## 0.0.1
 
-- initial Release
+Initial Release:
+
+- add generic error handler
