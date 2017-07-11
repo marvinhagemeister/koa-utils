@@ -5,7 +5,11 @@
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "author": "Marvin Hagemeister <marvin@marvinhagemeister.de>",
-  "keywords": ["koa", "rest", "middleware"],
+  "keywords": [
+    "koa",
+    "rest",
+    "middleware"
+  ],
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -24,7 +28,12 @@
   },
   "dependencies": {
     "@types/koa": "^2.0.39",
-    "koa": "^2.3.0"
+    "@types/koa-compose": "^3.2.2",
+    "@types/koa-logger": "^2.0.2",
+    "koa": "^2.3.0",
+    "koa-body": "^2.3.0",
+    "koa-compose": "^4.0.0",
+    "koa-logger": "^3.0.1"
   },
   "devDependencies": {
     "@types/chai": "^4.0.1",
@@ -51,7 +60,10 @@
     ]
   },
   "nyc": {
-    "include": ["src/*.ts", "src/**/*.ts"],
+    "include": [
+      "src/*.ts",
+      "src/**/*.ts"
+    ],
     "exclude": [
       "typings",
       "node_modules/",
@@ -59,9 +71,19 @@
       "__tests__/**",
       "**/*.d.ts"
     ],
-    "extension": [".ts"],
-    "require": ["ts-node/register"],
-    "reporter": ["json", "html", "text", "text-summary", "lcovonly"],
+    "extension": [
+      ".ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "json",
+      "html",
+      "text",
+      "text-summary",
+      "lcovonly"
+    ],
     "all": true
   }
 }
